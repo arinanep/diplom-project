@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+
+{% load static %}
+
+  <link rel="stylesheet" type="text/css" href="{% static '/style.css' %}"/>
+</head>
+<body>
+<main class="major">
+<nav class="container"> 
+ <div class='block'> <a href='/index' class="menu_links"> Главная </a></div>
+ <div class='block'><a href='/about' class="menu_links"> О нас </a></div>
+ <div class='block'><a href='/posts' class="menu_links"> Посты </a></div>
+ 
+{% if user.is_authenticated %}
+ <div class='block'><span class="menu_links">{{user}}</span></div>
+ <div class='block'><a href="/logout" class="menu_links">Выйти</a></div>
+{% else %}
+ <div class='block'><a href='/login' class="menu_links"> Вход </a></div>
+{% endif %}
+
+</nav> 
+<div class="header">MY SITE</div>
+<div class="header_h2">Мини-социальная сеть</div>
+<div class="container_about">
+
+    <div class="block_about"><p>Это наш итоговый проект</p> </div>
+    <div class="block_about"><p>В данном проекте выполнены следующие действия:</p></div>
+    <div class="block_list">   
+    <p>
+        <u class="list">
+            <li>Взаимодействие с файлами и медиа</li>
+            <li>Внедрение ООП в программный код и использование нескольких парадигм</li>
+            <li>Взаимодействие с базой данных</li>
+            <li>Взаимодействие с транзакциями данных в Xml-файлы</li>
+            <li>Ииспользование REST запросов</li>
+            <li>Подключение фреймворка Django</li>
+            <li>Взаимодействие и обработка сервисом данных пользователя</li>
+    
+        </u>
+    </p>  
+    </div>
+  
+</div>
+</main>
+</body>
+</html>

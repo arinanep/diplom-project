@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+
+{% load static %}
+
+  <link rel="stylesheet" type="text/css" href="{% static '/style.css' %}"/>
+
+</head>
+<body>
+<main class="major">
+<nav class="container"> 
+ <div class='block'> <a href='/index' class="menu_links"> Главная </a></div>
+ <div class='block'><a href='/about' class="menu_links"> О нас </a></div>
+ <div class='block'><a href='/posts' class="menu_links"> Посты </a></div>
+ <div class='block'> <a href='/registration' class="menu_links"> Регистрация </a></div>
+</nav> 
+<div class="container_about">
+<div class="container_post">
+    <form action="/registration" method="POST" style="margin: 100px;"> 
+        {% csrf_token %}
+        <input type="text" placeholder="Name" name="name" style="width: 20vw; height: 30px; margin: 5px;"/>
+        <input type="text" placeholder="Email" name="email" style="width: 20vw; height: 30px; margin: 5px;"/>
+        <input type="text" placeholder="Password" name="password" style="width: 20vw; height: 30px; margin: 5px;"/>
+        <input type="submit" value="Зарегистрироваться" style="width: 15vw; height: 36px; margin: 5px;"/>
+    </form>
+</div>
+</div>
+</main>
+</body>
+</html>

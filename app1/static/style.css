@@ -1,0 +1,153 @@
+
+.major {
+  background: #A9A9A9;
+}
+
+.container {
+  display: flex;
+  border: 3px solid #C0C0C0;
+  background: #A9A9A9;
+  padding: 10px;
+
+}
+
+ .block {
+  font-size: 50px;
+  text-align: center;
+  box-sizing: content-box; 
+  height: 80px;
+  width: 210px;
+  margin-left: 15px;
+  margin-right: auto;
+  
+}
+
+.menu_links {
+  color: #DCDCDC;
+  text-decoration: none;
+}
+
+.header{
+  display: block;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 100px;
+}
+.header_h2{
+  display: block;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 30px;
+}
+.container_h2 {
+  display: flex;
+  border: 3px solid #C0C0C0;
+  background: #A9A9A9;
+  padding:40px; 
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.block_h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 50px;
+  text-align: center;
+  box-sizing: content-box; 
+  height: 300px;
+  width: 350px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 3px solid #C0C0C0;
+  background: #A9A9A9;
+  padding:40px;
+}
+
+.container_about {
+
+  border: 3px solid #C0C0C0;
+  background: #A9A9A9;
+  padding:40px; 
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100%;
+  width: 100%;
+}
+
+.block_about {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 30px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  background: #A9A9A9;
+  padding:5px;
+}
+
+.block_list {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 25px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  background: #A9A9A9;
+  margin:5px;
+  list-style-type: square;
+}
+
+.list {
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+}
+
+.container_post {
+
+  border: 3px solid #C0C0C0;
+  background: #A9A9A9;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+
+}
+
+.text_post {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 30px;
+  background: #A9A9A9;
+  color: white;
+}
+
+.c-button {
+  appearance: none;
+  border: 0;
+  border-radius: 5px;
+  background: #656769;
+  color: #fff;
+  padding: 8px 16px;
+  font-size: 16px;
+}
+
+.button_links {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #f4f0f0;
+  text-decoration: none;
+  font-size: 20px;
+  text-align: center;
+}
+
+.button {
+    border-color: rgb(107, 106, 106);
+    padding: 1px 7px 2px;
+    margin: 2px;
+    text-rendering: auto;
+    color: initial;
+    display: inline-block;
+    text-align: start;
+    font: 400 11px system-ui;
+    text-align: center;
+}
+
+
