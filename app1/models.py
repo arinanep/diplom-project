@@ -8,3 +8,10 @@ class Posts(models.Model):
     def __str__(self):
         return self.title
  
+class Comments(models.Model):
+    author = models.CharField(max_length=30)
+    text = models.TextField()
+    post = models.ForeignKey(Posts, on_delete=models.CASCADE, verbose_name='id')
+
+    def __str__(self):
+        return self.text

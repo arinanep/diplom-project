@@ -14,9 +14,9 @@
  <div class='block'> <a href='/index' class="menu_links"> Главная </a></div>
  <div class='block'><a href='/about' class="menu_links"> О нас </a></div>
  <div class='block'><a href='/posts' class="menu_links"> Посты </a></div>
- 
+ <div class='block'> <a href='/comments' class="menu_links"> Комментарии </a></div>
 {% if user.is_authenticated %}
- <div class='block'><span class="menu_links">{{user}}</span></div>
+ <div class='block'><span class="menu_links" style="margin-left: 80px;">{{user}}</span></div>
  <div class='block'><a href="/logout" class="menu_links">Выйти</a></div>
 {% else %}
  <div class='block'><a href='/login' class="menu_links"> Вход </a></div>
@@ -34,10 +34,13 @@
   <form action='newpost' method="POST" enctype="multipart/form-data" style="margin: 20px">
      {% csrf_token %}
 
+     {% if user.is_authenticated %}
+
      <input type='text' placeholder='Header' name='title'/>
      <input type='text' placeholder='Text of post' name='text'/>
      <input type='file' name='file'/>
      <input type='submit' value='Create'/>
+     {% endif %}
   </form>
   <div class="button" >
     <div class="c-button" type="button">

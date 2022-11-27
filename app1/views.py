@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponseRedirect, FileResponse
 from .models import Posts
+from .models import Comments
 from django.core.files.storage import FileSystemStorage
 import xml.etree.ElementTree as ET
 from django.contrib.auth.models import User
@@ -14,7 +15,6 @@ def about(request):
 
 def posts(request):
     posts = Posts.objects.all()
-    print(posts)
     return render(request, 'posts.html', {'posts': posts})
 
 def newposts(request):
@@ -103,3 +103,19 @@ def login_user(request):
 def logout_user(request):
     logout(request)
     return HttpResponseRedirect('/index')
+
+def newcomment(request, id):
+    author = request.POST.get('author')
+    text = request.POST.get('text')
+    post = Posts.objects.get(id= id)
+    comment = Comments()
+    comment.author = author
+    comment.text = text
+    comment.post = post
+    comment.save()
+    return HttpResponseRedirect('/posts')
+
+def comments(request):
+    comments = Comments.objects.all()
+    return render(request, 'comments.html', {'comments': comments})
+

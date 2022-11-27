@@ -33,5 +33,8 @@ urlpatterns = [
     path('registration', views.registration),
     path('login', views.login_user),
     path('logout', views.logout_user),
-    
+    path('newcomment/<int:id>', views.newcomment),
+    path('comments', views.comments),
+
+
 ]
